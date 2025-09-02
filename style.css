@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f0f9ff, #e0f7fa, #ede7f6);
+  color: #333;
+  line-height: 1.6;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+header {
+  background: linear-gradient(135deg, #ffffff, #000000, #317882);
+  color: #d4dddf;
+  padding: 50px 20px;
+  text-align: center;
+  transition: background 0.5s ease;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #e0f7fa;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #144349;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #00838f;
+  transform: scale(1.05);
+}
+
+nav {
+  background: #020000;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00acc1;
+}
+
+/* Dark Mode Toggle Button */
+.toggle-btn {
+  cursor: pointer;
+  background: #00acc1;
+  border: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+.toggle-btn:hover {
+  background: #00838f;
+}
+
+section {
+  padding: 60px 80px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #00acc1;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+.skills,
+.certifications {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease,
+    color 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projects .project {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s, background 0.5s ease, color 0.5s ease;
+}
+
+.projects .project:hover {
+  transform: scale(1.02);
+}
+
+.projects h3 {
+  margin-bottom: 8px;
+  color: #1976d2;
+}
+
+footer {
+  background: #0d47a1;
+  color: #ddd;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+footer a {
+  color: #00e5ff;
+  text-decoration: none;
+}
+
+/* ===== DARK MODE STYLES ===== */
+body.dark {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+body.dark header {
+  background: linear-gradient(135deg, #1a237e, #0d47a1, #004d40);
+}
+
+body.dark h2 {
+  color: #80deea;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+  color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .projects .project {
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark footer {
+  background: #1a1a1a;
+  color: #bbb;
+}
+
+body.dark nav {
+  background: #1c1c1c;
+}
+
+body.dark nav a {
+  color: #80deea;
+}
+
+body.dark .toggle-btn {
+  background: #80deea;
+  color: #000;
+}
+
+/* Shared badge style */
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* Tech Skills Colors */
+.icon-java {
+  background: #f44336;
+} /* Java - Red */
+.icon-js {
+  background: #f7df1e;
+  color: #000;
+} /* JavaScript - Yellow */
+.icon-python {
+  background: #3776ab;
+} /* Python - Blue */
+.icon-sql {
+  background: #009688;
+} /* SQL - Teal */
+.icon-react {
+  background: #61dafb;
+  color: #000;
+} /* React - Light Blue */
+.icon-html {
+  background: #e34c26;
+} /* HTML - Orange/Red */
+.icon-css {
+  background: #264de4;
+} /* CSS - Blue */
+.icon-tailwind {
+  background: #06b6d4;
+} /* Tailwind - Cyan */
+.icon-spring {
+  background: #4caf50;
+} /* Spring - Green */
+.icon-hibernate {
+  background: #59666c;
+} /* Hibernate - Gray */
+.icon-node {
+  background: #68a063;
+} /* Node.js - Green */
+.icon-api {
+  background: #ff9800;
+} /* API - Orange */
+.icon-mysql {
+  background: #00618a;
+} /* MySQL - Navy */
+.icon-xampp {
+  background: #ff6f00;
+} /* XAMPP - Orange */
+.icon-git {
+  background: #f1502f;
+} /* Git - Red/Orange */
+.icon-github {
+  background: #000;
+} /* GitHub - Black */
+.icon-postman {
+  background: #ff6c37;
+} /* Postman - Orange */
+.icon-maven {
+  background: #1565c0;
+} /* Maven - Blue */
+
+/* Soft Skills Colors */
+.icon-adapt {
+  background: #00acc1;
+}
+.icon-team {
+  background: #4caf50;
+}
+.icon-leader {
+  background: #f44336;
+}
+.icon-problem {
+  background: #ffeb3b;
+  color: #000;
+}
+.icon-time {
+  background: #3f51b5;
+}
+.icon-comm {
+  background: #009688;
+}
+.icon-think {
+  background: #9c27b0;
+}
+.icon-creative {
+  background: #ff7043;
+}
+.icon-sport {
+  background: #1976d2;
+}
