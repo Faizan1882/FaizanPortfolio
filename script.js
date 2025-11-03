@@ -14,3 +14,7 @@ function toggleDarkMode() {
     btn.textContent = "🌙 Dark Mode";
   }
 }
+function toggleMenu() {
+  const nav = document.querySelector(".nav-links");
+  nav.classList.toggle("active");
+}

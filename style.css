@@ -303,3 +303,68 @@ body.dark .toggle-btn {
 .icon-sport {
   background: #1976d2;
 }
+/* Navbar base */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a,
+.toggle-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100; /* keep above menu */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: -250px; /* start hidden */
+    height: 100vh;
+    width: 220px;
+    background: #111;
+    padding: 80px 20px;
+    border-left: 2px solid #333;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.6);
+    transition: right 0.4s ease-in-out;
+  }
+
+  .nav-links.active {
+    right: 0; /* slide in */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+}
